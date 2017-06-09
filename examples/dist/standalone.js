@@ -1159,7 +1159,7 @@ var Select = (0, _createReactClass2['default'])({
 
 	disableEventList: function disableEventList() {
 		// Android webview touchstart and touchend triggers and opens and
-		// immediately closes select and thus we ignore the the touchend event
+		// immediately closes select and thus we ignore the touchend event
 		var events = ['mousedown'];
 		var ua = navigator.userAgent.toLowerCase();
 		// If Android and not Chrome
@@ -1170,7 +1170,7 @@ var Select = (0, _createReactClass2['default'])({
 	},
 
 	handleMouseDown: function handleMouseDown(event) {
-		// if the event was triggered by a mousedown and not the primary
+		// if the event was triggered by a mousedown/touchend and not the primary
 		// button, or if the component is disabled, ignore it.
 		if (this.props.disabled || this.disableEventList().indexOf(event.type) !== -1 && event.button !== 0) {
 			return;
@@ -1220,7 +1220,7 @@ var Select = (0, _createReactClass2['default'])({
 	},
 
 	handleMouseDownOnArrow: function handleMouseDownOnArrow(event) {
-		// if the event was triggered by a mousedown and not the primary
+		// if the event was triggered by a mousedown/touchend and not the primary
 		// button, or if the component is disabled, ignore it.
 		if (this.props.disabled || this.disableEventList().indexOf(event.type) !== -1 && event.button !== 0) {
 			return;
@@ -1237,7 +1237,7 @@ var Select = (0, _createReactClass2['default'])({
 	},
 
 	handleMouseDownOnMenu: function handleMouseDownOnMenu(event) {
-		// if the event was triggered by a mousedown and not the primary
+		// if the event was triggered by a mousedown/touchend and not the primary
 		// button, or if the component is disabled, ignore it.
 		if (this.props.disabled || this.disableEventList().indexOf(event.type) !== -1 && event.button !== 0) {
 			return;
