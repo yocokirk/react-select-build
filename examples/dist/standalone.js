@@ -1163,8 +1163,8 @@ var Select = (0, _createReactClass2['default'])({
 		var events = ['mousedown'];
 		var ua = navigator.userAgent.toLowerCase();
 		// If Android and not Chrome
-		if (ua.indexOf("android") > -1 && ua.indexOf("chrome") === -1) {
-			events.push('touchend ');
+		if (ua.indexOf('android') > -1 && ua.indexOf('chrome') === -1) {
+			events.push('touchend');
 		}
 		return events;
 	},
